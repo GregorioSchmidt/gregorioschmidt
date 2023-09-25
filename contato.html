@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+	<head>
+         <title> Contato | New Era</title>
+	     <meta charset="utf-8"> 
+		 <link rel="icon" type="image/jpg" href="img/logonewera.png"/> 
+		 <link rel="stylesheet" type="text/css" href="estilo.css">
+		 <script language="javascript" type="text/javascript">
+			function validar(){
+			var email = contato.email.value;
+			var fale = contato.fale.value;
+			var nome = contato.nome.value;
+			var telefone = contato.telefone.value;
+			
+			
+			if (nome == ""){
+				alert('Por favor, preencha o campo com o seu nome!');
+				contato.nome.focus();
+			return false;
+			}
+			
+			if (telefone == ""){
+				alert('Por favor, preencha o campo com o seu número de telefone!');
+				contato.telefone.focus();
+			return false;
+			}
+			
+			if (email == ""){
+				alert('Por favor, preencha o campo com o seu email!');
+				contato.email.focus();
+			return false;
+			}
+			
+			if (fale == ""){
+				alert('Por favor, escreva seu recado!');
+				contato.fale.focus();
+			return false;
+			}
+			}
+		</script>
+	</head>
+    <body>
+		<header>
+			<nav>
+				<ul class="atalhos">
+						<li><a href="index.html"><img src="img/logonewera.png" class="logo"></a></li>
+					<div class="atalhos1">
+						<div class="container">
+						<li><a href="index.html"><button class="btn">Home</button></a>
+						<a href="sobre.html"><button class="btn">Sobre</button></a>
+						<a href="modelos.html"><button class="btn">Modelos</button></a>
+						<a href="contato.html"><button class="active">Contato</button></a></li>
+						<li><a href="contatoingles.html"><img src="img/eua.png" class="eua"></a></li>
+						<li><a href="contato.html"><img src="img/brasil.png" class="brasil"></a></li>
+						</div>
+					</div>
+				</ul>
+			</nav>
+		</header>
+		<div class="fundocontato">
+			<div class="formcontato">
+			<form name="contato" action="contatoconfirmado.html" method="post">
+
+				Nome: <input type="text" name="nome"><br>
+				<span class="tel">Telefone: <input type="text" name="telefone"></span><br>
+				Email: <input type="text" name="email"><br>
+				<span class="fale">Fale Conosco: <br>
+				 <textarea rows="15" cols="60" name="fale"></textarea> </span>
+				<br>
+				<div class="botoes">
+				<input id="botoes1" type="submit" onclick="return validar()" value="Enviar">
+				</div>
+			</form>
+			</div>
+		</div>
+		<hr class="hr1">
+		<div class="rodape1">
+			<p>Gregório Schmidt 2023 - &copyTodos os direitos reservados<br>
+				Trabalho Acadêmico - Sem fins lucrativos</p>
+		</div>
+		<script src="./main.js"></script>
+		</body>
+		</html>
